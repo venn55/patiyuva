@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Yedikule Hayvan Barınağı</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Yedikule Hayvan Barınağı</h1>
+  <nav>
+    <a href="index.html">Anasayfa</a>
+    <a href="shelters.html">Barınaklar</a>
+    <a href="donate.html">Bağış</a>
+    <a href="contact.html">İletişim</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Sahiplendirme Listesi</h2>
+
+  <div class="filter-box">
+    <h3>Filtreler</h3>
+    <label><input type="checkbox" class="filter" value="enerjik"> Enerjik</label><br>
+    <label><input type="checkbox" class="filter" value="eğitimli"> Eğitimli</label><br>
+    <label><input type="checkbox" class="filter" value="sakin"> Sakin</label><br>
+    <label><input type="checkbox" class="filter" value="fiziktedavi"> Fizik Tedavi Uygun</label><br>
+    <label><input type="checkbox" class="filter" value="eğitime_uygun"> Eğitime Uygun</label><br>
+    <label><input type="checkbox" class="filter" value="yaşlı"> Yaşlılara Uygun</label><br>
+  </div>
+
+  <div class="card-grid" id="dogList">
+    <!-- Köpek kartları örneği -->
+    <div class="card" data-tags="enerjik eğitimli sakin fiziktedavi eğitime_uygun yaşlı">
+      <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d">
+      <h3>Köpek 1</h3>
+      <p>Sevimli ve dost canlısı bir köpek.</p>
+    </div>
+    <div class="card" data-tags="enerjik sakin yaşlı">
+      <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
+      <h3>Köpek 2</h3>
+      <p>Enerjik ve oyun sever.</p>
+    </div>
+    <!-- Toplam 8-9 kart benzer şekilde eklenebilir -->
+  </div>
+
+  <h3>Barınak İhtiyaçları & Bağış</h3>
+  <ul>
+    <li>🐾 Mama ve su kapları</li>
+    <li>🛏 Yatak ve battaniye</li>
+    <li>💊 Vitamin ve ilaç desteği</li>
+    <li>🏥 Veteriner giderleri</li>
+  </ul>
+  <p>Bağış ve iletişim: 0555 555 55 55 | bagis@patiyuva.org</p>
+
+  <script>
+    document.querySelectorAll('.filter').forEach(f => {
+        f.addEventListener('change', function() {
+            let active = Array.from(document.querySelectorAll('.filter:checked')).map(x => x.value);
+            document.querySelectorAll('#dogList .card').forEach(card => {
+                let tags = card.getAttribute('data-tags');
+                let show = active.every(a => tags.includes(a));
+                card.style.display = show || active.length === 0 ? 'block' : 'none';
+            });
+        });
+    });
+  </script>
+</div>
+
+<footer>PatiYuva © 2025</footer>
+</body>
+</html>
