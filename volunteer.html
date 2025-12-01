@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gönüllü Ol — PatiYuva</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="site-header"><div class="container"><a class="logo" href="index.html">PatiYuva</a><nav aria-label="Ana menü"><a href="index.html">Anasayfa</a><a href="animals.html">Hayvanlar</a><a href="volunteer.html">Gönüllü Ol</a></nav></div></header>
+<main class="container"><article class="card"><h1>Gönüllü Başvurusu</h1>
+<form id="vol-form" class="form" aria-describedby="vol-info">
+  <p id="vol-info">Lütfen formu doldurun; gönüllü koordinatörü en kısa sürede iletişime geçecektir.</p>
+  <label for="v-name">İsim</label><input id="v-name" name="name" required>
+  <label for="v-email">E-posta</label><input id="v-email" name="email" type="email" required>
+  <label for="v-phone">Telefon (isteğe bağlı)</label><input id="v-phone" name="phone" type="tel">
+  <label for="v-availability">Uygunluk</label><input id="v-availability" name="availability" placeholder="Hafta içi 18:00-20:00">
+  <label for="v-notes">Notlar / Yetkinlikler</label><textarea id="v-notes" name="notes" rows="4"></textarea>
+  <button type="submit" class="btn">Gönder</button>
+  <div role="status" id="vol-status" aria-live="polite"></div>
+</form></article></main>
+<footer class="site-footer"><div class="container"><p>© <span id="year6"></span> PatiYuva</p></div></footer>
+<script src="script.js"></script></body></html>

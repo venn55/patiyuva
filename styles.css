@@ -1,0 +1,23 @@
+/* PatiYuva — Hazır, gezilebilir demo stil */
+:root{--accent:#1177bb;--bg:#f7f9fb;--card:#fff;--text:#111;--radius:10px;--maxw:1000px;font-size:18px}
+*{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.5}
+.container{max-width:var(--maxw);margin:0 auto;padding:20px}
+.site-header{background:var(--card);border-bottom:1px solid #e6eef6;position:sticky;top:0;z-index:10}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.4rem}
+.site-header nav a{margin-left:12px;text-decoration:none;color:var(--text)}
+.hero{background:linear-gradient(180deg, rgba(17,119,187,0.06), transparent);padding:28px;border-radius:var(--radius);margin:18px 0}
+.card{background:var(--card);padding:18px;border-radius:var(--radius);margin:18px 0;box-shadow:0 2px 6px rgba(20,20,20,0.04)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.animal{border:1px solid #e6eef6;padding:12px;border-radius:8px;background:linear-gradient(180deg,#fff,#fbfdff)}
+.animal img{width:100%;height:150px;object-fit:cover;border-radius:6px}
+.detail-img{width:100%;height:auto;border-radius:8px;margin:10px 0}
+.card-link{display:block;padding:18px;background:#fff;border-radius:8px;text-decoration:none;color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,0.04)}
+.form label{display:block;margin-top:10px;font-weight:600}
+.form input,.form textarea{width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid #d6e6f2;font-size:1rem}
+.btn{display:inline-block;background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;border:0;cursor:pointer;margin-top:12px}
+.btn.outline{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+.small{font-size:0.85rem;color:#6b6b6b}
+.site-footer{margin-top:28px;padding:18px 0;text-align:center}
+@media (max-width:700px){.site-header .container{flex-direction:column;align-items:flex-start}.site-header nav a{margin-left:0;margin-top:8px}}
+:focus{outline:3px solid rgba(17,119,187,0.25);outline-offset:2px}
